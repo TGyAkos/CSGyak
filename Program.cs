@@ -8,7 +8,7 @@ namespace CSGyak
     {
         public static void Main(string[] args)
         {
-            IUserModel IAmUser = new UserModel();
+            UserModel IAmUser = new UserModel();
 
             WriteLine("num");
             IAmUser.FirstName = ReadLine();

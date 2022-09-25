@@ -5,13 +5,13 @@ namespace Model
 {
     internal interface IUserModel
     {
-        protected internal int this[int _id]
+        private protected int this[int _id]
         {
             get;
             set;
         }
-        protected internal string? FirstName { get; set; }
-        protected internal string? SurName { get; set; }
+        private protected string? FirstName { get; set; }
+        private protected string? SurName { get; set; }
 
     }
     internal class UserModel : IUserModel
