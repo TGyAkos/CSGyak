@@ -19,11 +19,15 @@ namespace Model
         public string? FirstName { get; set; }
         public string? SurName { get; set; }
 
-        private int[] idArray = new int[100];
+        private int[] idArray = new int[100]; //maybe public
         public int this[int _id] 
         { 
             get => idArray[_id];
             set => idArray[_id] = value;
+        }
+        public string FirstNameById(int _id)
+        {
+            get => idArray[_id].FirstName;
         }
     }
 }

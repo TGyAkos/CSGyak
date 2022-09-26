@@ -15,11 +15,11 @@ namespace CSGyak
             WriteLine(IAmUser);
             for (int i = 0; i < 5; i++)
             {
-                IAmUser.FirstName = ReadLine();
+                IAmUser[i] = ReadLine();
             }
             for (int i = 0; i < 5; i++)
             {
-                WriteLine(IAmUser.FirstName);
+                WriteLine(IAmUser[i]);
             }
             WriteLine(IAmUser); 
 

@@ -2,7 +2,7 @@
 
 namespace Controller
 {
-    public class UserController
+    internal class UserController
     {
         
     }
