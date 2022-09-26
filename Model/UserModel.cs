@@ -5,11 +5,11 @@ namespace Model
 {
     internal interface IUserModel
     {
-        private protected int this[int _id]
+        /*private protected int this[int _id]
         {
             get;
             set;
-        }
+        }*/
         private protected string? FirstName { get; set; }
         private protected string? SurName { get; set; }
 
@@ -18,16 +18,16 @@ namespace Model
     {
         public string? FirstName { get; set; }
         public string? SurName { get; set; }
+    }
+    internal class UserModelCollection : UserModel
+    {
+        private UserModel[] userModelCollection = new UserModel[10];
 
-        private int[] idArray = new int[100]; //maybe public
-        public int this[int _id] 
-        { 
-            get => idArray[_id];
-            set => idArray[_id] = value;
-        }
-        public string FirstNameById(int _id)
+        public UserModel this[int _id]
         {
-            get => idArray[_id].FirstName;
+            get => userModelCollection[_id];
+            set => userModelCollection[_id] = value;    
         }
+
     }
 }

@@ -11,7 +11,7 @@ namespace View
         }
         private static void DrawOptions(string[] InputOptions)
         {
-            for(int i = 0; i < InputOptions.Lenght; i++)
+            for(int i = 0; i < InputOptions.Length; i++)
             {
                 WriteLine("{0}. - {1}", i + 1, InputOptions[i]);
             }

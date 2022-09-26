@@ -8,20 +8,22 @@ namespace CSGyak
     {
         public static void Main(string[] args)
         {
-            UserModel IAmUser = new UserModel();
+            UserModelCollection IAmUserCollection = new UserModelCollection();
 
             WriteLine("num");
-            IAmUser.FirstName = ReadLine();
-            WriteLine(IAmUser);
+            //IAmUserCollection[1].FirstName = ReadLine();
+            WriteLine(IAmUserCollection);
             for (int i = 0; i < 5; i++)
             {
-                IAmUser[i] = ReadLine();
+                UserModel IAmUser = new UserModel();
+                IAmUser.FirstName = ReadLine();
+                IAmUserCollection[i] = IAmUser;
             }
             for (int i = 0; i < 5; i++)
-            {
-                WriteLine(IAmUser[i]);
+            {   
+                WriteLine(IAmUserCollection[i].FirstName);
             }
-            WriteLine(IAmUser); 
+            WriteLine(IAmUserCollection); 
 
         }
     }
